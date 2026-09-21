@@ -32,7 +32,7 @@ function ArcadeContent() {
       <header className="arcadeHeader">
         <p className="eyebrow">VÆLG DIT SPIL</p>
         <h1>CH2C <span>ARKADEN</span></h1>
-        <p>Tre klassikere. Ét forsøg. Hvor længe kan du holde dig i live?</p>
+        <p>Velkommen til arkaden, hvilke 3 ord kan du finde?</p>
       </header>
       <section className="gameRow">
         {games.map((game) => (
@@ -40,7 +40,7 @@ function ArcadeContent() {
             <div className="cardTop"><span>{game.number}</span><span>● ONLINE</span></div>
             <div className="artWindow"><GameArt slug={game.slug} /></div>
             <div className="cardInfo">
-              <h2>{game.name}</h2>
+              <h2>{game.slug === "tetris" ? <><span className="pinkLetter">T</span>ETR<span className="pinkLetter">I</span>S</> : game.name}</h2>
               <p>{game.tagline}</p>
               <span className="playButton">SPIL NU <b>→</b></span>
             </div>
